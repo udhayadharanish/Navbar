@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        border: none;
+        text-decoration: none;
+        box-sizing: border-box;
+
+
+    }
+    body{
+        min-height: 100vh;
+
+    }
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: aliceblue;
+        padding: 0px 7%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+
+    }
+    header .logo{
+        font-size: 25px;
+        color: black;
+    }
+    header .navbar ul{
+        list-style: none;
+    }
+    header .navbar ul li{
+        position: relative;
+        float: left;
+    }
+
+    header .navbar ul li a{
+        font-size: 20px ;
+        padding: 20px;
+        color: black;
+        display: block;
+    }
+    header .navbar ul li a:hover{
+        background-color: black;
+        color: white;
+    }
+    header .navbar ul li ul{
+        position: absolute;
+        left: 0;
+        width: 200px;
+        background-color: rgb(251, 252, 251);
+        display: none;
+    }
+    header .navbar ul li ul li{
+        width: 100%;
+        border-top: 1px solid rgba(0,0, 0, 0.1);
+    }
+    header .navbar ul li ul li ul{
+        left: 160px;
+        top: 0;
+    }
+    header .navbar ul li:focus-within > ul ,
+    header .navbar ul li:hover > ul{
+        display: initial;
+    }
+
+    #menu_bar{
+            display: none;
+        }
+    header label{
+        font-size: 20px;
+        color: black;
+        cursor: pointer;
+        display: none;
+    }
+
+
+
+
+    @media (max-width:938px) {
+        body{
+            overflow-y: scroll;
+        }
+        header{
+            padding: 20px;
+
+        }
+        header label{
+            display: initial;
+        }
+        header .navbar{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: aliceblue;
+            border-top: 1 px solid black;
+            display: none;
+        }
+
+        header .navbar ul li{
+            width: 100%;
+        }
+        header .navbar ul li ul{
+            position: relative;
+            width: 100% ;
+        }
+        header .navbar ul li ul li{
+            background-color: aquamarine;
+        }
+        header .navbar ul li ul li ul{
+            left: 0;
+            width: 100%;
+        }
+        #menu_bar:checked ~ .navbar{
+            display: initial;
+        }
+        ul a{
+            font-size: 20px;
+        }
+        
+    }
+</style>
+<body>
+    <header>
+        <a href="#" class="logo">LOGO</a>
+        <input type="checkbox" id="menu_bar">
+        <label for="menu_bar">Menu</label>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">what we offer ? +</a>
+                    
+                    <ul>
+                        <li><a href="#">DIGITAL MARKETING & BRANDING +</a>
+                            <ul>
+                                <li><a href="#">Soacial Media Management</a></li>
+                                <li><a href="#">Facebook & Inota Ads</a></li>
+                                <li><a href="#">Personal Branding</a></li>
+                                <li><a href="#">Content Writing</a></li>
+                                <li><a href="#">Ghost Writing</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">TECHNOLOGY +</a>
+                            <ul>
+                                <li><a href="#">Web Application</a></li>
+                                <li><a href="#">App Application</a></li>
+                                <li><a href="#">UI/UX Design</a></li>
+                                <li><a href="#">Data Analytics</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">ELECTRONICS +</a>
+                            <ul>
+                                <li><a href="#">IOT</a></li>
+                                <li><a href="#">Power Electronics</a></li>
+                                <li><a href="#">Embedded System</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                </li>
+                <li><a href="#">our products</a></li>
+                <li><a href="#">contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
