@@ -43,8 +43,8 @@
     }
 
     header .navbar ul li a{
-        font-size: 20px ;
-        padding: 20px;
+        font-size: 15px ;
+        padding: 10px;
         color: black;
         display: block;
     }
@@ -91,6 +91,7 @@
         }
         header{
             padding: 20px;
+            
 
         }
         header label{
@@ -104,6 +105,7 @@
             background-color: aliceblue;
             border-top: 1 px solid black;
             display: none;
+
         }
 
         header .navbar ul li{
@@ -111,20 +113,21 @@
         }
         header .navbar ul li ul{
             position: relative;
+            z-index: 9999;
             width: 100% ;
+            font-size: 15px;
+
         }
         header .navbar ul li ul li{
             background-color: aquamarine;
         }
+        
         header .navbar ul li ul li ul{
             left: 0;
             width: 100%;
         }
         #menu_bar:checked ~ .navbar{
             display: initial;
-        }
-        ul a{
-            font-size: 20px;
         }
         
     }
